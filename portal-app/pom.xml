@@ -9,10 +9,8 @@
   <packaging>jar</packaging>
   <name>portal-app</name>
   <description>Demo project for Spring Boot</description>
-
   <build>
     <plugins>
-
       <plugin>
         <artifactId>maven-clean-plugin</artifactId>
         <version>2.5</version>
@@ -43,7 +41,15 @@
               <npmVersion>5.5.1</npmVersion>
             </configuration>
           </execution>
-
+		  <execution>
+             <id>npm install</id>
+            <goals>
+              <goal>npm</goal>
+            </goals>
+            <configuration>
+              <arguments>install</arguments>
+            </configuration>
+          </execution>
           <execution>
              <id>npm run build</id>
             <goals>
@@ -53,7 +59,6 @@
               <arguments>run build</arguments>
             </configuration>
           </execution>
-
         </executions>
       </plugin>
     </plugins>
