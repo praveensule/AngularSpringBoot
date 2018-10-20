@@ -8,12 +8,14 @@ import { AppRoutingModule } from './app.routing.module';
 import {UserService} from './user/user.service';
 import {HttpClientModule} from "@angular/common/http";
 import {AddUserComponent} from './user/add-user.component';
+import {AddUserSuccessComponent} from './user/add-user-success.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UserComponent,
-    AddUserComponent
+    AddUserComponent,
+    AddUserSuccessComponent
   ],
   imports: [
     BrowserModule,

@@ -5,24 +5,24 @@ import { User } from '../models/user.model';
 import { UserService } from './user.service';
 
 @Component({
-  templateUrl: './add-user.component.html'
+  templateUrl: './add-user-success.component.html'
 })
-export class AddUserComponent {
+export class AddUserSuccessComponent {
 
-  user: User = new User();
-  router: Router;
+  //user: User = new User();
+
   constructor(private router: Router, private userService: UserService) {
 
   }
 
+  /*
   createUser(): void {
     this.userService.createUser(this.user)
         .subscribe( data => {
-           debugger
-           alert("User created successfully.");
-           this.router.navigate(['/add-success']);
+          alert("User created successfully.");
         });
-	
+
   };
+  */
 
 }
