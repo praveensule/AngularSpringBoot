@@ -10,19 +10,16 @@ import { UserService } from './user.service';
 export class AddUserComponent {
 
   user: User = new User();
-  router: Router;
+  routerNav: Router;
   constructor(private router: Router, private userService: UserService) {
-
+		this.routerNav=router
   }
 
   createUser(): void {
     this.userService.createUser(this.user)
         .subscribe( data => {
-           debugger
-           alert("User created successfully.");
-           this.router.navigate(['/add-success']);
+           this.routerNav.navigate(['/add-success']);
         });
-	
   };
 
 }
