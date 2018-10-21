@@ -1,21 +1,32 @@
-<div class="col-md-6">
-  <h2 class="text-center">Add User</h2>
-<form>
-  <div class="form-group">
-    <label for="email">Email address:</label>
-    <input type="email" [(ngModel)]="user.email" placeholder="Email" name="email" class="form-control" id="email">
-  </div>
+<form class="contact100-form validate-form">
+	<span class="contact100-form-title">
+		Get in touch
+	</span>
 
-  <div class="form-group">
-    <label for="firstName">First Name:</label>
-    <input [(ngModel)]="user.firstName" placeholder="First Name" name="firstName" class="form-control" id="firstName">
-  </div>
+	<div class="wrap-input100 validate-input" data-validate = "Name is required">
+		<input [(ngModel)]="user.firstName" class="input100" type="text" name="name" placeholder="Name" id="firstName">
+		<span class="focus-input100"></span>
+		<span class="symbol-input100">
+			<i class="fa fa-user" aria-hidden="true"></i>
+		</span>
+	</div>
 
-  <div class="form-group">
-    <label for="lastName">Last Name:</label>
-    <input [(ngModel)]="user.lastName" placeholder="Last name" name="lastName" class="form-control" id="lastName">
-  </div>
+	<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+		<input class="input100" type="text" name="email" placeholder="Email" [(ngModel)]="user.email" id="email">
+		<span class="focus-input100"></span>
+		<span class="symbol-input100">
+			<i class="fa fa-envelope" aria-hidden="true"></i>
+		</span>
+	</div>
 
-  <button class="btn btn-success" (click)="createUser()">Create</button>
+	<div class="wrap-input100 validate-input" data-validate = "Message is required">
+		<textarea [(ngModel)]="user.lastName" class="input100" name="message" placeholder="Message" id="lastName"></textarea>
+		<span class="focus-input100"></span>
+	</div>
+
+	<div class="container-contact100-form-btn">
+		<button class="contact100-form-btn" (click)="createUser()">
+			Send
+		</button>
+	</div>
 </form>
-</div>
